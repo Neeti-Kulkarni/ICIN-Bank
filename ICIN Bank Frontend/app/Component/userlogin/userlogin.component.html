@@ -1,0 +1,22 @@
+<div class="container col-md-4 mt-4 py-5 bg-light">
+    <h2><i class="fa-solid fa-lock"></i>&nbsp;Login</h2><hr>
+<form  (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="UserId">User Id</label>
+        <input type="text" name="UserId"   id="UserId" placeholder="Enter User Id" class="form-control" [(ngModel)]="user.userid">
+        
+    </div>
+    <div class="form-group">
+        <label for="epin">E-pin</label>
+        <input type="password" name="epin"  id="epin" placeholder="Enter epin" class="form-control" [(ngModel)]="user.epin">
+    </div>
+   <br>
+
+    <div>
+        <p>New to ICIN BANK <a routerLink="/adduser">Send Request</a> or <a routerLink="/adminlogin">Admin</a></p>
+    </div>
+    <br>
+    <button class="btn btn-primary" >Login</button>
+
+</form>
+</div>

@@ -1,0 +1,65 @@
+<div class="container">
+
+  <h2>Block User</h2>
+  <hr>
+
+
+<form class="row g-3 needs-validation" novalidate (submit)="onSubmit()">
+    <div class="col-md-4">
+      <label for="username" class="form-label">User name</label>
+      <input type="text" class="form-control" id="username" name="username"  required value="{{user.username}}">
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="useraccount" class="form-label">Account Number</label>
+      <input type="text" class="form-control" id="useraccount" name="accnumber"  required value="{{user.useraccountnumber}}">
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="usermobile" class="form-label">Mobile No</label>
+      <div class="input-group has-validation">
+       
+        <input type="text" class="form-control" id="usermobile"name="mobileno" aria-describedby="inputGroupPrepend" required value="{{user.mobilenumber}}" >
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="usercity" class="form-label">City</label>
+      <input type="text" class="form-control" id="usercity" name="city" required value="{{user.city}}">
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="userstate" class="form-label">State</label>
+     <input type="text" class="form-control" id="userstate" name="state" required value="{{user.state}}">
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="userpincode" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="userpincode"name="zip" required  value="{{user.pincode}}">
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-md-3">
+        <label for="blockuser" class="form-label">Block</label>
+        <input type="text" class="form-control" id="blockuser"name="Blockuser" required  [(ngModel)]="updateuser.block">
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+    
+    <div class="col-12">
+      <button class="btn btn-danger" type="submit">Block User</button>
+    </div>
+  </form>
+</div>

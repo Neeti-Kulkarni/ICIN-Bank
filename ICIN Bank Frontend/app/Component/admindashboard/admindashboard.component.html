@@ -1,0 +1,45 @@
+<div class="container mt-3">
+    <div class="card">
+      <div class="card text-bg-dark">
+        
+        <div class="card-img-overlay">
+      <h1 style="color:rgb(12, 12, 12);">Welcome Admin</h1>
+      <h3 style="color:rgb(15, 15, 15);">ICIN Bank Application Progress below</h3>
+  
+      <ul class="nav " >
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/userlist" style="font-size: 20px; color: rgb(12, 11, 11);"> 
+              User-List
+            </a>
+          </li>&nbsp;&nbsp;
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/adduser" style="font-size: 20px; color: rgb(14, 13, 13);">
+              Add-User
+            </a>
+          </li>&nbsp;&nbsp;
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/transactionlist" style="font-size: 20px; color: rgb(26, 25, 25);">
+                Transaction-List
+              </a>
+          </li>&nbsp;&nbsp;
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/requestlist" style="font-size: 20px; color: rgb(17, 16, 16);">
+              Request-List
+            </a>
+        </li>&nbsp;&nbsp;
+          <li class="nav-item">
+            <a class="nav-link" (click)="logout()" style="font-size: 20px; color: rgb(5, 5, 5);">
+             Logout
+            </a>
+        </li>&nbsp;&nbsp;
+          
+        </ul>
+        <router-outlet></router-outlet>   
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  

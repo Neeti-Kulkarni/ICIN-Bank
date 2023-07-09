@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <h2>Request</h2>
+      <hr>
+        <form  (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="userName">Account Holder Name</label>
+                <input type="text" name="userName"  id="userName"  class="form-control" value="{{user.username}}">
+            </div>
+            <div class="form-group">
+                <label for="ReceiverAccount">Account Number</label>
+                <input type="text" name="ReceiverAccount"   id="ReceiverAccount"  class="form-control" value="{{user.useraccountnumber}}">
+                
+            </div>
+            
+            <div class="form-group">
+                <label for="note">Note</label>
+                <textarea class="form-control" name="note" placeholder="Leave a text here" id="floatingTextarea2" style="width: 1000px;" [(ngModel)]="request.requestnotes"></textarea>
+                
+            </div>
+           <br>
+            <br>
+            <button class="btn btn-primary" >Send</button>
+        </form>
+        <router-outlet></router-outlet>   
+  </div>
+  

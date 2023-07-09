@@ -1,0 +1,85 @@
+<div>
+    <div class="card text-bg-dark">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/transfer">Transfer</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/req">Request</a>
+                  </li>
+                </ul> 
+              </div>
+            </div>
+            
+          </nav> 
+</div>
+<div class="container col mt-4">
+    <div class="card" >
+        <h5 class="card-header">Hi {{profileuser.username}}</h5>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Account Number :</strong> {{profileuser.useraccountnumber}}</li>
+                <li class="list-group-item"><strong>Account Type :</strong> {{profileuser.productcode}}</li>
+                <li class="list-group-item"><strong>Primary Amount :</strong> {{profileuser.primaryaccount}}</li>
+                <li class="list-group-item"><strong>Savings Amount :</strong> {{profileuser.amountdeposited}}</li>
+              </ul><br>
+          <a routerLink="/profile" class="btn btn-primary">View details </a>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h4>Transaction History</h4><hr>
+    <table class="table table-bodered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th><th>Receiver Account</th><th>Account Holder Name</th><th>Amount</th><th>Notes</th><th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of transaction">
+                <td>{{t.transactionid}}</td>
+                <td>{{t.recevieraccountnumber}}</td>
+                <td>{{t.receivername}}</td>
+                <td>{{t.senderamount}}</td>
+                <td>{{t.sendernotes}}</td>
+                
+                <td>
+                    <a routerLink="/profile">
+                        <button class="btn btn-success">Resend</button>
+                    </a>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    
+    <h4>Request History</h4><hr>
+    <table class="table table-bodered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th><th>Account Holder</th><th>Account Number</th><th>Notes</th><th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of req">
+                <td>{{r.id}}</td>
+                <td>{{r.username}}</td>
+                <td>{{r.useraccountnumber}}</td>
+                <td>{{r.requestnotes}}</td>
+                <td>{{r.status}}</td>
+                
+                
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,84 @@
+<div class="container col mt-4" >
+
+    <h2>Register</h2>
+    <hr>
+    <form class="row g-3 needs-validation" novalidate (submit)="onSubmit()">
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Name</label>
+          <input type="text" class="form-control" id="validationCustom01" name="username" [(ngModel)]="user.username" required >
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+       
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Account Type</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationCustomUsername" name="productcode" aria-describedby="inputGroupPrepend" required [(ngModel)]="user.productcode">
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Mobile No</label>
+          <input type="text" class="form-control" id="validationCustom03" name="mobileno" required [(ngModel)]="user.mobilenumber">
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Account Currency</label>
+            <input type="text" class="form-control" id="validationCustom05" name="accountcurrency" required [(ngModel)]="user.accountcurrency">
+            <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Primary Account Balance</label>
+          <input type="text" class="form-control" id="validationCustom05" name="primaryaccount" required [(ngModel)]="user.amountdeposited">
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Savings Account Balance</label>
+            <input type="text" class="form-control" id="validationCustom05" name="savingsaccount" required [(ngModel)]="user.primaryaccount">
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+        <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationCustom05"name="city" required [(ngModel)]="user.city">
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">State</label>
+            <input type="text" class="form-control" id="validationCustom05" name="state" required [(ngModel)]="user.state">
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="validationCustom05" name="pincode" required [(ngModel)]="user.pincode">
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">E-pin</label>
+            <input type="password" class="form-control" id="validationCustom05" name="epin" required [(ngModel)]="user.epin">
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Register</button>
+          </div>
+       
+      </form>
+</div>

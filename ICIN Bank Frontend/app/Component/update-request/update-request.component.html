@@ -1,0 +1,46 @@
+<div class="container">
+
+    <h2>Approve Status</h2>
+    <hr>
+  
+  
+  <form class="row g-3 needs-validation" novalidate (submit)="onSubmit()">
+      <div class="col-md-4">
+        <label for="username" class="form-label">User name</label>
+        <input type="text" class="form-control" id="username" name="username"  required value="{{request.username}}">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="useraccount" class="form-label">Account Number</label>
+        <input type="text" class="form-control" id="useraccount" name="accnumber"  required value="{{request.useraccountnumber}}">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="usermobile" class="form-label">Request</label>
+        <div class="input-group has-validation">
+         
+          <input type="text" class="form-control" id="usermobile"name="mobileno" aria-describedby="inputGroupPrepend" required value="{{request.requestnotes}}" >
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+          <label for="blockuser" class="form-label">Status</label>
+          <input type="text" class="form-control" id="blockuser"name="Blockuser" required  [(ngModel)]="req.status">
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+      
+      <div class="col-12">
+        <button class="btn btn-success" type="submit">Approve</button>
+      </div>
+    </form>
+  </div>
+  

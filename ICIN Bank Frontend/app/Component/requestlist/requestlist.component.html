@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <h4>Request List</h4><hr>
+    <table class="table table-bodered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th><th>Owner Name</th><th>Account Number</th><th>Request</th><th>Status</th><th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of req">
+                <td>{{u.id}}</td>
+                <td>{{u.username}}</td>
+                <td>{{u.useraccountnumber}}</td>
+                <td>{{u.requestnotes}}</td>
+                <td>{{u.status}}</td>
+                <td>
+                    <a routerLink="/updateReq/{{u.id}}">
+                        <button class="btn btn-success">Approve</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    

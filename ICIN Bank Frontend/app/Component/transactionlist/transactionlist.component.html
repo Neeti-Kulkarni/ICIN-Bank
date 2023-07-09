@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <h4>Transaction list</h4><hr>
+    <table class="table table-bodered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th><th>Sender Account</th><th>Receiver Account</th><th>Account Holder</th><th>Amount</th><th>Notes</th><th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of transaction">
+                <td>{{u.transactionid}}</td>
+                <td>{{u.senderaccountnumber}}</td>
+                <td>{{u.recevieraccountnumber}}</td>
+                <td>{{u.receivername}}</td>
+                <td>{{u.senderamount}}</td>
+                <td>{{u.sendernotes}}</td>
+                <td>
+                    <a routerLink="/updateProduct/{{u.transactionid}}">
+                        <button class="btn btn-primary">View</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    
